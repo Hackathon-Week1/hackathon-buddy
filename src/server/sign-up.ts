@@ -54,7 +54,5 @@ export async function signUpAction(_: unknown, formData: FormData) {
     };
   }
 
-  return null;
-
-  //return redirect("/sign-in");
+  return redirect("/sign-in");
 }

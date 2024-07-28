@@ -38,7 +38,5 @@ export async function signInAction(_: unknown, formData: FormData) {
     };
   }
 
-  return null;
-
-  //return redirect("/sign-in");
+  return redirect("/profile-form");
 }
