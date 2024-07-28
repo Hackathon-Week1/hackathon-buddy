@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 import os
 import pandas as pd
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 
 load_dotenv(dotenv_path = '../.env.local')
 
@@ -58,6 +59,7 @@ def find_matches(users, target_skills, user_location):
 
 # Flask app
 app = Flask(__name__)
+CORS(app)
 
 @app.route('/recommend', methods=['GET'])
 def recommend():
