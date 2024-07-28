@@ -6,3 +6,4 @@ There’s so much to think about when selecting team members: similar time zones
 
 View our application on: https://hackathon-buddy.onrender.com/sign-in
 
+More details about the application and the creators of it: https://docs.google.com/presentation/d/1YbZQHfaAQSoPE7u24Ub8THeob7u8OS73alfeUWF0SdU/edit?usp=sharing
