@@ -53,7 +53,7 @@ export default function Home() {
           <div>
             Do not have an account?{" "}
             <span>
-              <a className="text-blue-500 hover:underline" href="/">
+              <a className="text-blue-500 hover:underline" href="/sign-up">
                 Sign up
               </a>
             </span>
