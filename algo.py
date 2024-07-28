@@ -45,10 +45,11 @@ def calculate_match_score(user, target_skills):
     openai_score = get_openai_similarity_score(user, target_skills)
     return openai_score
 
-def find_matches(users, target_skills, user_location):
+def find_matches(users, target_skills, user_location, user_idd):
     matches = []
     for user in users:
-        if user['location'] == user_location:
+        if user['id'] != user_idd:
+            if user['location'] == user_location:
                 score = calculate_match_score(user, target_skills)
                 matches.append({
                     'name': user['name'],
@@ -66,7 +67,7 @@ CORS(app)
 def recommend():
     users = fetch_data()
     print(users)
-    user_id =  '444948db-e621-4284-b3c7-b5f5c62a7882' #supabase.auth.get_user()
+    user_id =  '9f8cd831-ef25-4cfb-b343-b39d07754fde' #supabase.auth.get_user()
     #target_skills = request.args.get('target_skills', '').split(',')
 
     if not user_id:
@@ -86,12 +87,11 @@ def recommend():
 
     print(f"The user index is: \n{user_index}")
 
-
     if user_index is None:
         return jsonify({"error": "User not found"}), 404
 
     user_location = user_index['location']
-    recommendations = find_matches(users, target_skills, user_location)
+    recommendations = find_matches(users, target_skills, user_location, user_id)
     return jsonify(recommendations)
 
 if __name__ == "__main__":
