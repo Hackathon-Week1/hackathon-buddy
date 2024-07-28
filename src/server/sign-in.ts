@@ -1,7 +1,7 @@
 "use server";
 
 import { z } from "zod";
-import { supabase } from "./supabase";
+import { supabaseServerClient } from "./supabase";
 import { redirect } from "next/navigation";
 
 const SignInSchema = z.object({
@@ -25,7 +25,7 @@ export async function signInAction(_: unknown, formData: FormData) {
 
   const { email, password } = parsed.data;
 
-  const { error } = await supabase.auth.signInWithPassword({
+  const { error } = await supabaseServerClient.auth.signInWithPassword({
     email,
     password,
   });
@@ -38,5 +38,5 @@ export async function signInAction(_: unknown, formData: FormData) {
     };
   }
 
-  return redirect("/profile-form");
+  return redirect("/profile");
 }

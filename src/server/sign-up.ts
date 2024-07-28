@@ -1,7 +1,7 @@
 "use server";
 
 import { z } from "zod";
-import { supabase } from "./supabase";
+import { supabaseServerClient } from "./supabase";
 import { redirect } from "next/navigation";
 
 const SignUpSchema = z.object({
@@ -41,7 +41,7 @@ export async function signUpAction(_: unknown, formData: FormData) {
     };
   }
 
-  const { error } = await supabase.auth.signUp({
+  const { error } = await supabaseServerClient.auth.signUp({
     email,
     password,
   });

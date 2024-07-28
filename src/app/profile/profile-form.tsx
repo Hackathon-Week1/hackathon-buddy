@@ -51,15 +51,13 @@ const ProfileForm = () => {
     <div className="flex justify-center items-center min-h-screen bg-black">
       <form
         onSubmit={handleSubmit}
-        className="w-full max-w-lg bg-white p-8 rounded-lg shadow-md"
-      >
+        className="w-full max-w-lg bg-white p-8 rounded-lg shadow-md">
         <h2 className="text-2xl font-bold mb-6 text-center">Profile Form</h2>
 
         <div className="mb-4">
           <label
             className="block text-gray-700 text-sm font-bold mb-2"
-            htmlFor="name"
-          >
+            htmlFor="name">
             Name
           </label>
           <input
@@ -76,8 +74,7 @@ const ProfileForm = () => {
         <div className="mb-4">
           <label
             className="block text-gray-700 text-sm font-bold mb-2"
-            htmlFor="email"
-          >
+            htmlFor="email">
             Email Address
           </label>
           <input
@@ -94,8 +91,7 @@ const ProfileForm = () => {
         <div className="mb-4">
           <label
             className="block text-gray-700 text-sm font-bold mb-2"
-            htmlFor="password"
-          >
+            htmlFor="password">
             Password
           </label>
           <input
@@ -112,8 +108,7 @@ const ProfileForm = () => {
         <div className="mb-4">
           <label
             className="block text-gray-700 text-sm font-bold mb-2"
-            htmlFor="city"
-          >
+            htmlFor="city">
             City
           </label>
           <input
@@ -130,8 +125,7 @@ const ProfileForm = () => {
         <div className="mb-4">
           <label
             className="block text-gray-700 text-sm font-bold mb-2"
-            htmlFor="state"
-          >
+            htmlFor="state">
             State
           </label>
           <input
@@ -148,8 +142,7 @@ const ProfileForm = () => {
         <div className="mb-4">
           <label
             className="block text-gray-700 text-sm font-bold mb-2"
-            htmlFor="country"
-          >
+            htmlFor="country">
             Country
           </label>
           <input
@@ -166,8 +159,7 @@ const ProfileForm = () => {
         <div className="mb-4">
           <label
             className="block text-gray-700 text-sm font-bold mb-2"
-            htmlFor="industryInterests"
-          >
+            htmlFor="industryInterests">
             Industry Interests
           </label>
           <div className="flex flex-wrap">
@@ -192,8 +184,7 @@ const ProfileForm = () => {
         <div className="mb-4">
           <label
             className="block text-gray-700 text-sm font-bold mb-2"
-            htmlFor="specialty"
-          >
+            htmlFor="specialty">
             Specialty
           </label>
           <div className="flex flex-wrap">
@@ -218,8 +209,7 @@ const ProfileForm = () => {
         <div className="mb-6">
           <button
             type="submit"
-            className="w-full bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-blue-600"
-          >
+            className="w-full bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-blue-600">
             Submit
           </button>
         </div>
