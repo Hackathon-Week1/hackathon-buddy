@@ -6,8 +6,18 @@ export default function FindPeople() {
   const [people, setPeople] = useState([]);
 
   async function handleMatch() {
+    const userId = "9ccc801d-f4fe-4799-bb3f-e11c365bce4e";
+    const targetSkills = [
+      "AI/ML",
+      "Cybersecurity",
+      "Hardware",
+      "Front-end",
+      "Back-end",
+    ];
     const response = await fetch(
-      "/recommendation?user_id=1&target_skills=python,react"
+      `/recommendation?user_id=${userId}&target_skills=${targetSkills.join(
+        ","
+      )}`
     );
     const data = await response.json();
     setPeople(data);
