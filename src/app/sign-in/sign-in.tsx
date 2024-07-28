@@ -46,7 +46,7 @@ export default function Home() {
             </div>
             <button
               type="submit"
-              className="borde border-white py-1 px-2 rounded-lg bg-red-500 hover:bg-red-700 text-black duration-200">
+              className="border border-white py-1 px-2 rounded-lg bg-red-500 hover:bg-red-700 text-black duration-200">
               Sign in
             </button>
           </form>
